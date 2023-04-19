@@ -21,7 +21,7 @@
 
         .text{
             border-top-right-radius: 20px ;
-            border-bottom-left-radius: 20px;
+            border-bottom-left-radius: 10px;
             border-color: black;
             border: 3px solid blue;
         }
@@ -57,7 +57,7 @@
     </style>
 </head>
 <body class="bg">
-    <form align="center" action="" method="post" >
+    <form align="center" action="" >
 
         <h1> SURVEY FORM </h1> <br> <br>
         
@@ -65,10 +65,10 @@
 
             <legend class="name"> <b> NAME </b></legend> <BR>
             <label   style="font-size: larger; "  for="FirstName">  <b>  First Name </b> </label> &nbsp;&nbsp;
-            <input class="border text"  size="30" type="text" name="FirstName" id="FirstName" required> <br> <br>
+            <input class="border text"  size="30" type="text" name="first_name" id="FirstName" required> <br> <br>
 
             <label  style="font-size: larger; "  for="LastName">  <b>  Last Name </b> </label> &nbsp;&nbsp;
-            <input  class="border text"  size="30" type="text" name="LastName" id="LastName" required> <br> <br>
+            <input  class="border text"  size="30" type="text" name="last_name" id="LastName" required> <br> <br>
 
             
 
@@ -81,56 +81,60 @@
 
             <legend class="name"> <b> ADDRESS </b></legend> <br>
             <label  style="font-size: larger; "  for="street">  <b>  street </b> </label> &nbsp;&nbsp;
-            <input  class="border text"  size="30" type="text" name="street" id="street" required> <br> <br>
+            <input  class="border text"  size="30" type="text" name="street_address" id="street" required> <br> <br>
 
             <label  style="font-size: larger; "  for="city">  <b> city </b> </label> &nbsp;&nbsp;&nbsp;
             <input  class="border text"  size="30" type="text" name="city" id="city" required> <br> <br>
 
+            <label  style="font-size: larger; "  for="pincode">  <b> pin code </b> </label> &nbsp;&nbsp;
+            <input   class="border text"  type="number" name="pincode" id="pincode" required> <br> <br>
+
             <label  style="font-size: larger; "  for="state">  <b>  state </b> </label> &nbsp;&nbsp;
             <input  class="border text"  size="30" type="text" name="state" id="state" required> <br> <br>
 
-            <label  style="font-size: larger; "  for="pincode">  <b> pin code </b> </label> &nbsp;&nbsp;
-            <input   class="border text"  type="number" name="pincode" id="pincode" required> <br> <br>
+            
             </fieldset> <br> <br>
 
             <label  style="font-size: larger; "  for="contact">  <b> contact number </b> </label> &nbsp;&nbsp;
-            <input  class="border text"   type="number" name="contact" id="contact" required> <br> <br> <BR>
+            <input  class="border text"   type="number" name="contact_number" id="contact" required> <br> <br> <br>
 
             <fieldset class="field"> 
                 <legend class="name"> <b> RATING </b></legend> 
                 <h3> Quality of products received </h3> 
 
                 <label style="font-size: larger; "  for="excellent">  Execellent  </label> 
-                <input  type="radio" name="quality" id="excellent" required>&nbsp;&nbsp;
+                <input  type="radio" name="quality_of_prducts_received_rating" value="bad" id="excellent" required>&nbsp;&nbsp;
 
                 <label  style="font-size: larger; "  for="good"> Good  </label> 
-                <input    type="radio" name="quality" id="good" required>&nbsp;&nbsp;
+                <input    type="radio" name="quality_of_prducts_received_rating" value="bad" id="good" required>&nbsp;&nbsp;
 
                 <label  style="font-size: larger; "  for="bad"> Bad  </label> 
-                <input    type="radio" name="quality" id="bad" required> <br> <br>
-
-                <h3> Value for money </h3> 
-                <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
-                <input    type="radio" name="value" id="excellent" required>&nbsp;&nbsp;
-
-                <label  style="font-size: larger; "  for="good"> Good  </label> 
-                <input  type="radio" name="value" id="good" required>&nbsp;&nbsp;
-
-                <label  style="font-size: larger; "  for="bad"> Bad  </label> 
-                <input  type="radio" name="value" id="bad" required> <br> <br>
+                <input    type="radio" name="quality_of_prducts_received_rating" value="bad" id="bad" required> <br> <br>
 
                 <h3> Delivery </h3> 
                 <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
-                <input  type="radio" name="delivery" id="excellent" required>&nbsp;&nbsp;
+                <input  type="radio" value="excellent" name="delivery_rating" id="excellent" required>&nbsp;&nbsp;
 
                 <label  style="font-size: larger; "  for="good"> Good  </label> 
-                <input  type="radio" name="delivery" id="good" required>&nbsp;&nbsp;
+                <input  type="radio" value="good" name="delivery_rating" id="good" required>&nbsp;&nbsp;
 
                 <label  style="font-size: larger; "  for="bad"> Bad  </label> 
-                <input  type="radio" name="delivery" id="bad" required> <br> <br>
+                <input  type="radio" value="bad" name="delivery_rating" id="bad" required> <br> <br>
+
+                <h3> Value for money </h3> 
+                <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
+                <input    type="radio" value="excellent" name="value_for_money_rating" id="excellent" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="good"> Good  </label> 
+                <input  type="radio" value="good" name="value_for_money_rating" id="good" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="bad"> Bad  </label> 
+                <input  type="radio" value="bad" name="value_for_money_rating" id="bad" required> <br> <br>
+
+               
             </fieldset> <br> <br> <br>
 
-            <input class="button"  type="submit" name="submit" value="submit" id="submit" required> <br> <br>
+            <input class="button"  type="submit" value="submit"/> 
 
 
 
