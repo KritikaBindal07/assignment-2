@@ -20,8 +20,7 @@
         }
 
         .text{
-            border-top-right-radius: 20px ;
-            border-bottom-left-radius: 10px;
+            border-radius: 15px;
             border-color: black;
             border: 3px solid blue;
         }
@@ -52,7 +51,13 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-  ;
+        input:hover{
+            background-color: wheat;
+        }
+        .cursor{
+            cursor: pointer;
+        }
+
 
     </style>
 </head>
@@ -69,6 +74,8 @@
 
             <label  style="font-size: larger; "  for="LastName">  <b>  Last Name </b> </label> &nbsp;&nbsp;
             <input  class="border text"  size="30" type="text" name="last_name" id="LastName" required> <br> <br>
+
+
 
             
 
@@ -123,7 +130,7 @@
 
                 <h3> Value for money </h3> 
                 <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
-                <input    type="radio" value="excellent" name="value_for_money_rating" id="excellent" required>&nbsp;&nbsp;
+                <input class="radio"   type="radio" value="excellent" name="value_for_money_rating" id="excellent" required>&nbsp;&nbsp;
 
                 <label  style="font-size: larger; "  for="good"> Good  </label> 
                 <input  type="radio" value="good" name="value_for_money_rating" id="good" required>&nbsp;&nbsp;
@@ -132,9 +139,9 @@
                 <input  type="radio" value="bad" name="value_for_money_rating" id="bad" required> <br> <br>
 
                
-            </fieldset> <br> <br> <br>
+            </fieldset> <br> <br> <br> <br>
 
-            <input class="button"  type="submit" value="submit"/> 
+            <input class="button cursor"  type="submit" value="submit"/> 
 
 
 
